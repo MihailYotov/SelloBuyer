@@ -1,3 +1,6 @@
-selloBuyer.controller('SelloBuyerController', function($scope) {
-    $scope.hello = "HELEEEEEEEEEEEOOO!"
+selloBuyer.controller('SelloBuyerController', function($scope, loadAds) {
+    loadAds.getAllAds(function(resp)
+    {
+        $scope.data = resp
+    })
 });
