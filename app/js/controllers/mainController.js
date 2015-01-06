@@ -1,15 +1,15 @@
-selloBuyer.controller('SelloBuyerController', function($scope, loadAds) {
+selloBuyer.controller('SelloBuyerController', function($scope, loadAds, townsData, categoriesData) {
     loadAds.getAllAds(function(resp)
     {
         $scope.data = resp
     });
 
-    loadAds.getAllTowns(function(resp)
+    townsData.getAllTowns(function(resp)
     {
         $scope.towns = resp
     });
 
-    loadAds.getAllCategories(function(resp)
+    categoriesData.getAllCategories(function(resp)
     {
         $scope.categories = resp
     })

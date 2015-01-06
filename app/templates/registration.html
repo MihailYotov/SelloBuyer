@@ -47,7 +47,9 @@
         <div class="form-group">
             <label class="col-lg-2 control-label" for="inputTown">Town</label>
             <div class="col-lg-10">
-                <input type="password" placeholder="Town" id="inputTown" class="form-control">
+                <select id="inputTown" class="form-control" ng-options="town.id as town.name for town in towns" ng-model="selected">
+
+                </select>
             </div>
         </div>
 
