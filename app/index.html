@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-controller="AppController">
 <head lang="en">
     <meta charset="UTF-8">
     <title>Index</title>
@@ -12,7 +12,7 @@
 <div class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="../">SelloBuyer</a>
+            <a class="navbar-brand" href="#/ads">SelloBuyer</a>
             <button data-target="#navbar-main" data-toggle="collapse" type="button" class="navbar-toggle">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -22,7 +22,7 @@
         <div id="navbar-main" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="../help/">Help</a>
+                    <a href="#">Help</a>
                 </li>
                 <li>
                     <a href="#/ads">Ads</a>
@@ -36,19 +36,36 @@
     </div>
 </div>
 
-<div ng-view class="container">
+<div class="content">
+    <div class='col-md-2 sidebar'>
+        <div ng-include="'templates/partial/leftSidebar.html'"></div>
+    </div>
+
+    <div class='col-md-8' ng-view>
+    </div>
+
+    <div class='col-md-2 sidebar' ng-controller="RightSidebarController">
+        <div ng-include="'templates/partial/rightSidebar.html'"></div>
+    </div>
+</div>
 
 </div>
 
-<script src="lib/jquery-2.1.1.js"></script>
-<script src="js/bootstrap.js"></script>
 <script src="lib/angular/angular.js"></script>
 <script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-resource.js"></script>
+<script src="lib/jquery/jquery-2.1.1.js"></script>
+<script src="lib/jquery.noty/jquery.noty.js"></script>
+
 <script src="js/app.js"></script>
-<script src="js/controllers/mainController.js"></script>
-<script src="js/controllers/registrationController.js"></script>
-<script src="js/services/townsData.js"></script>
-<script src="js/services/categoriesData.js"></script>
-<script src="js/services/loadAdsService.js"></script>
+
+<script src="js/services/adsService.js"></script>
+
+<script src="js/controllers/AppController.js"></script>
+<script src="js/controllers/HomeController.js"></script>
+<script src="js/controllers/LoginController.js"></script>
+<script src="js/controllers/RegistrationController.js"></script>
+<script src="js/controllers/RightSidebarController.js"></script>
+
 </body>
 </html>

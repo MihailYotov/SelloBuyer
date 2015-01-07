@@ -1,3 +1,5 @@
-/**
- * Created by Mike on 3.1.2015 г..
- */
+'use strict';
+
+app.controller('LoginController', function ($scope, $location, authService, notifyService) {
+
+})

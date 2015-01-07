@@ -1,15 +1,29 @@
-var selloBuyer = angular.module('selloBuyerModule', ['ngRoute'])
-    .config(function ($routeProvider) {
-        $routeProvider.when('/register', {
-            templateUrl: 'templates/registration.html',
-            controller: 'RegistrationController'
-        });
-        $routeProvider.when('/login', {
-            templateUrl: 'templates/login.html'
-            //controller: 'loginController'
-        });
-        $routeProvider.when('/ads', {
-            templateUrl: 'templates/ads.html'
-        });
-        $routeProvider.otherwise({redirectTo: '/ads'})
+'use strict';
+
+var app = angular.module('app', [ngRoute, ngResource]);
+
+app.constant('baseServiceUrl', 'http://localhost:1337/');
+app.constant('pageSize', 2);
+
+app.config(function ($routeProvider) {
+
+    $routeProvider.when('/', {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeController'
     });
+
+    $routeProvider.when('/login', {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController'
+    });
+
+    $routeProvider.when('/register', {
+        templateUrl: 'templates/register.html',
+        controller: 'RegistrationController'
+    });
+
+    $routeProvider.otherwise(
+        { redirectTo: '/' }
+    );
+
+})
