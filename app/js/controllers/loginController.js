@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('LoginController', function ($scope, $location, authService, notifyService) {
+selloBuyerApp.controller('LoginController', function ($scope, $location, authService, notifyService) {
 
 })

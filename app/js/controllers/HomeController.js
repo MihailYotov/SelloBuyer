@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('HomeController', function ($scope, $rootScope, adsService, noifyService, pageSize) {
+selloBuyerApp.controller('HomeController', function ($scope, $rootScope, adsService, noifyService, pageSize) {
 
 });

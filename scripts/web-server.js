@@ -51,7 +51,7 @@ HttpServer.prototype.start = function (port) {
     util.puts('**WARNING** While this server is running it will allow anyone with ');
     util.puts('**WARNING** access to port ' + port + ' to write to your filesystem!');
     util.puts('**WARNING** While some care has been taken to prevent access outside of the ');
-    util.puts('**WARNING** test app area, precautions should be taken to prevent');
+    util.puts('**WARNING** test selloBuyerApp area, precautions should be taken to prevent');
     util.puts('**WARNING** external access to this port.');
     util.puts('Http Server running at http://localhost:' + port + '/');
 };
@@ -121,7 +121,7 @@ StaticServlet.prototype.handleRequest = function (req, res) {
 StaticServlet.prototype.findAndSendTarget = function(req, path, res, self) {
 util.puts(path);
 	fs.stat(path, function (err, stat) {
-        if (err && path.indexOf('app/') >= 0)
+        if (err && path.indexOf('selloBuyerApp/') >= 0)
             return self.sendMissing_(req, res, path);
         else if (err) {
             if (path.indexOf('.json') == -1) {

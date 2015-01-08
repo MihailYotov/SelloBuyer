@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('AppController', function ($scope, authService) {
+selloBuyerApp.controller('AppController', function ($scope, authService) {
     $scope.authService = authService;
 });

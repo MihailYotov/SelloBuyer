@@ -1,14 +1,14 @@
 'use strict';
 
-var app = angular.module('app', [ngRoute, ngResource]);
+var selloBuyerApp = angular.module('selloBuyerApp', ['ngRoute', 'ngResource']);
 
-app.constant('baseServiceUrl', 'http://localhost:1337/');
-app.constant('pageSize', 2);
+selloBuyerApp.constant('baseServiceUrl', 'http://localhost:1337/');
+selloBuyerApp.constant('pageSize', 2);
 
-app.config(function ($routeProvider) {
+selloBuyerApp.config(function ($routeProvider) {
 
     $routeProvider.when('/', {
-        templateUrl: 'templates/home.html',
+        templateUrl: 'templates/homeAds.html',
         controller: 'HomeController'
     });
 
@@ -26,4 +26,4 @@ app.config(function ($routeProvider) {
         { redirectTo: '/' }
     );
 
-})
+});

@@ -1262,7 +1262,7 @@ function angularInit(element, bootstrap) {
   var elements = [element],
       appElement,
       module,
-      names = ['ng:app', 'ng-app', 'x-ng-app', 'data-ng-app'],
+      names = ['ng:selloBuyerApp', 'ng-selloBuyerApp', 'x-ng-selloBuyerApp', 'data-ng-selloBuyerApp'],
       NG_APP_CLASS_REGEXP = /\sng[:\-]app(:\s*([\w\d_]+);?)?\s/;
 
   function append(element) {
@@ -1319,7 +1319,7 @@ function angularInit(element, bootstrap) {
  *     Each item in the array should be the name of a predefined module or a (DI annotated)
  *     function that will be invoked by the injector as a run block.
  *     See: {@link angular.module modules}
- * @returns {auto.$injector} Returns the newly created injector for this app.
+ * @returns {auto.$injector} Returns the newly created injector for this selloBuyerApp.
  */
 function bootstrap(element, modules) {
   var doBootstrap = function() {
@@ -3018,7 +3018,7 @@ HashMap.prototype = {
  *   });
  * ```
  *
- * Sometimes you want to get access to the injector of a currently running Angular app
+ * Sometimes you want to get access to the injector of a currently running Angular selloBuyerApp
  * from outside Angular. Perhaps, you want to inject and compile some markup after the
  * application has been bootstrapped. You can do this using extra `injector()` added
  * to JQuery/jqLite elements. See {@link angular.element}.
@@ -4734,7 +4734,7 @@ function $CacheFactoryProvider() {
  *
  * Adding via the `script` tag:
  * ```html
- * <html ng-app>
+ * <html ng-selloBuyerApp>
  * <head>
  * <script type="text/ng-template" id="templateId.html">
  *   This is the content of the template
@@ -4745,7 +4745,7 @@ function $CacheFactoryProvider() {
  * ```
  *
  * **Note:** the `script` tag containing the template does not need to be included in the `head` of
- * the document, but it must be below the `ng-app` definition.
+ * the document, but it must be below the `ng-selloBuyerApp` definition.
  *
  * Adding via the $templateCache service:
  *
@@ -8056,11 +8056,11 @@ function createHttpBackend($browser, createXhr, $browserDefer, callbacks, rawDoc
       });
 
       // In IE6 and 7, this might be called synchronously when xhr.send below is called and the
-      // response is in the cache. the promise api will ensure that to the app code the api is
+      // response is in the cache. the promise api will ensure that to the selloBuyerApp code the api is
       // always async
       xhr.onreadystatechange = function() {
         // onreadystatechange might get called multiple times with readyState === 4 on mobile webkit caused by
-        // xhrs that are resolved while the app is in the background (see #5426).
+        // xhrs that are resolved while the selloBuyerApp is in the background (see #5426).
         // since calling completeRequest sets the `xhr` variable to null, we just check if it's not null before
         // continuing
         //
@@ -8200,7 +8200,7 @@ var $interpolateMinErr = minErr('$interpolate');
       this.label = "This binding is brought you by // interpolation symbols.";
   });
 </script>
-<div ng-app="App" ng-controller="DemoController as demo">
+<div ng-selloBuyerApp="App" ng-controller="DemoController as demo">
     //demo.label//
 </div>
 </file>
@@ -12598,7 +12598,7 @@ function adjustMatchers(matchers) {
  *
  * **Example**:  Consider the following case. <a name="example"></a>
  *
- * - your app is hosted at url `http://myapp.example.com/`
+ * - your selloBuyerApp is hosted at url `http://myapp.example.com/`
  * - but some of your templates are hosted on other domains you control such as
  *   `http://srv01.assets.example.com/`,  `http://srv02.assets.example.com/`, etc.
  * - and you have an open redirect at `http://myapp.example.com/clickThru?...`.
@@ -18734,7 +18734,7 @@ var ngControllerDirective = [function() {
  * This example shows how to apply the `ngCsp` directive to the `html` tag.
    ```html
      <!doctype html>
-     <html ng-app ng-csp>
+     <html ng-selloBuyerApp ng-csp>
      ...
      ...
      </html>
