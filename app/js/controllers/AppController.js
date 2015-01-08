@@ -1,3 +1,5 @@
-/**
- * Created by Mike on 8.1.2015 г..
- */
+'use strict';
+
+app.controller('AppController', function ($scope, authService) {
+    $scope.authService = authService
+});
