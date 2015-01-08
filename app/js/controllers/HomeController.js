@@ -1,5 +1,3 @@
-'use strict';
-
-selloBuyerApp.controller('HomeController', function ($scope, $rootScope, adsService, noifyService, pageSize) {
-
-});
+/**
+ * Created by Mike on 8.1.2015 г..
+ */

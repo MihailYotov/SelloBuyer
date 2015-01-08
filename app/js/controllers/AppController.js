@@ -1,5 +1,3 @@
-'use strict';
-
-selloBuyerApp.controller('AppController', function ($scope, authService) {
-    $scope.authService = authService;
-});
+/**
+ * Created by Mike on 8.1.2015 г..
+ */
