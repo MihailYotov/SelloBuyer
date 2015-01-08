@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller('RegistrationController', function ($scope, $location, townService, authService, notifyService) {
+app.controller('RegisterController', function ($scope, $location, townsService, authService, notifyService) {
 
 });
