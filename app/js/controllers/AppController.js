@@ -9,5 +9,9 @@ app.controller('AppController',
             notifyService.showInfo("You have logged out.");
             $location.path("/");
         };
+
+        $scope.cancel = function () {
+            $location.path("/");
+        }
     }
 );
