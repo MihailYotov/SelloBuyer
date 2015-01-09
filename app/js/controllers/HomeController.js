@@ -19,5 +19,17 @@ app.controller('HomeController', function ($scope, adsService, notifyService, pa
         };
 
         $scope.reloadAds();
+
+        $scope.$on("categorySelectionChanged", function(event, selectedCategoryId) {
+            $scope.adsParams.categoryId = selectedCategoryId;
+            $scope.adsParams.startPage = 1;
+            $scope.reloadAds();
+        });
+
+        $scope.$on("townSelectionChanged", function(event, selectedTownId) {
+            $scope.adsParams.townId = selectedTownId;
+            $scope.adsParams.startPage = 1;
+            $scope.reloadAds();
+        });
     }
 );
