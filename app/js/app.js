@@ -33,7 +33,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when('/user/ads/edit/:id', {
         templateUrl: 'templates/user/edit-ad.html',
-        controller: 'UserPublishNewAdController'
+        controller: 'UserEditAdController'
     });
 
     $routeProvider.otherwise({
