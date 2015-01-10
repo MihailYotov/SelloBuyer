@@ -27,6 +27,13 @@
                 </div>
             </div>
 
+            <div class="col-md-4" ng-if="ad.status=='Approved'">
+                <h2>
+                    <span class="label label-success">Status: {{ad.status}}</span>
+                </h2>
+                <button class="btn btn-primary" ng-click="deactivateUserAds(ad.id)">Deactivate</button>
+            </div>
+
             <div class="col-md-4" ng-if="ad.status=='WaitingApproval'">
                 <h2>
                     <span class="label label-warning">Status: {{ad.status}}</span>
@@ -42,10 +49,13 @@
                 <button class="btn btn-primary" ng-click="publishAgainUserAds(ad.id)" >Publish Again</button>
                 </div>
                 <div>
-                <button class="btn btn-warning" ng-click="" >Edit</button>
+                    <button class="btn btn-primary" ng-click="editAd(ad)" >Edit</button>
                 </div>
+                <!--<div>-->
+                    <!--<a href="#/user/ads/edit/{{ad.id}}"  class="link button">Edit</a>-->
+                <!--</div>-->
                 <div>
-                <button class="btn btn-danger" ng-click="" >Delete</button>
+                <button class="btn btn-danger" ng-click="deleteUserAds(ad.id)" >Delete</button>
                 </div>
             </div>
 

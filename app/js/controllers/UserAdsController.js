@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize, $location) {
+app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize) {
     $scope.adsParams = {
         'startPage' : 1,
         'pageSize' : pageSize
@@ -40,6 +40,19 @@ app.controller('UserAdsController', function ($scope, userService, notifyService
                 },
                 function error() {
                     notifyService.showError('Unable to publish the ad again')
+                }
+            );
+        };
+
+        $scope.deleteUserAds = function(id) {
+            userService.deleteAd(
+                id,
+                function success() {
+                    notifyService.showInfo("Ad Deleted!");
+                    $scope.reloadUserAds();
+                },
+                function error() {
+                    notifyService.showError('Unable to delete the ad')
                 }
             );
         };

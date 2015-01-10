@@ -38,6 +38,25 @@ app.factory('userService', function ($http, baseServiceUrl, authService) {
                     headers: authService.getAuthHeaders()
                 };
                 $http(request).success(success).error(error);
+            },
+
+            deleteAd: function (id, success, error) {
+                var request = {
+                    method: 'DELETE',
+                    url: baseServiceUrl + '/api/user/ads/'+id,
+                    headers: authService.getAuthHeaders()
+                };
+                $http(request).success(success).error(error);
+            },
+
+            editAd: function (id, adData, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/ads/'+id,
+                    headers: authService.getAuthHeaders(),
+                    data: adData
+                };
+                $http(request).success(success).error(error);
             }
         }
     }
