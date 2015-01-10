@@ -21,6 +21,19 @@ app.controller('UserEditProfileController', function ($scope, $rootScope, $locat
             )
         };
 
+        $scope.editUserPassword = function(adData) {
+            userService.editUserPass(
+                adData,
+                function success(data) {
+                    notifyService.showInfo('Password edited successfully.');
+                    $location.path("/user/ads");
+                },
+                function error(err) {
+                    notifyService.showError('Password edition failed.');
+                }
+            )
+        };
+
         $scope.cancel = function () {
             $location.path("/");
         }

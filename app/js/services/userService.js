@@ -85,6 +85,16 @@ app.factory('userService', function ($http, baseServiceUrl, authService) {
                     data: adData
                 };
                 $http(request).success(success).error(error);
+            },
+
+            editUserPass: function (adData, success, error) {
+                var request = {
+                    method: 'PUT',
+                    url: baseServiceUrl + '/api/user/changePassword',
+                    headers: authService.getAuthHeaders(),
+                    data: adData
+                };
+                $http(request).success(success).error(error);
             }
         }
     }
