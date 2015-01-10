@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize) {
+app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize, $location) {
     $scope.adsParams = {
         'startPage' : 1,
         'pageSize' : pageSize
@@ -17,6 +17,32 @@ app.controller('UserAdsController', function ($scope, userService, notifyService
             }
         );
     };
+
+        $scope.deactivateUserAds = function(id) {
+            userService.deactivateAd(
+                id,
+                function success() {
+                    notifyService.showInfo("Ad deactivated!");
+                    $scope.reloadUserAds();
+                },
+                function error() {
+                    notifyService.showError('Unable to deactivate the ad')
+                }
+            );
+        };
+
+        $scope.publishAgainUserAds = function(id) {
+            userService.publishAgainAd(
+                id,
+                function success() {
+                    notifyService.showInfo("Ad published again!");
+                    $scope.reloadUserAds();
+                },
+                function error() {
+                    notifyService.showError('Unable to publish the ad again')
+                }
+            );
+        };
 
     $scope.reloadUserAds();
     }

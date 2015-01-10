@@ -26,15 +26,29 @@
                     <strong>Phone:</strong>{{ad.ownerPhone}}
                 </div>
             </div>
+
             <div class="col-md-4" ng-if="ad.status=='WaitingApproval'">
-                <strong>Status:</strong>
-                <div>{{ad.status}}</div>
+                <h2>
+                    <span class="label label-warning">Status: {{ad.status}}</span>
+                </h2>
+                <button class="btn btn-primary" ng-click="deactivateUserAds(ad.id)">Deactivate</button>
             </div>
-            <div class="col-md-4" ng-if="ad.status=='Inactiv'">
-                <strong>Inactiv: <br/></strong>
-                <strong>Status:</strong>
-                <div>{{ad.status}}</div>
+
+            <div class="col-md-4" ng-if="ad.status=='Inactive'">
+                <h2>
+                    <span class="label label-danger">Status: {{ad.status}}</span>
+                </h2>
+                <div>
+                <button class="btn btn-primary" ng-click="publishAgainUserAds(ad.id)" >Publish Again</button>
+                </div>
+                <div>
+                <button class="btn btn-warning" ng-click="" >Edit</button>
+                </div>
+                <div>
+                <button class="btn btn-danger" ng-click="" >Delete</button>
+                </div>
             </div>
+
         </div>
     </li>
 </ul>
