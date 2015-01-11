@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="559c1d38-5321-4e5b-bf0d-2cad2ee198f6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/AppController.js" afterPath="$PROJECT_DIR$/app/js/controllers/AppController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/HomeController.js" afterPath="$PROJECT_DIR$/app/js/controllers/HomeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/RegisterController.js" afterPath="$PROJECT_DIR$/app/js/controllers/RegisterController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/UserAdsController.js" afterPath="$PROJECT_DIR$/app/js/controllers/UserAdsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/UserEditAdController.js" afterPath="$PROJECT_DIR$/app/js/controllers/UserEditAdController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/UserEditProfileController.js" afterPath="$PROJECT_DIR$/app/js/controllers/UserEditProfileController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/UserPublishNewAdController.js" afterPath="$PROJECT_DIR$/app/js/controllers/UserPublishNewAdController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/partial/header.html" afterPath="$PROJECT_DIR$/app/templates/partial/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home.html" afterPath="$PROJECT_DIR$/app/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/partial/right-sidebar.html" afterPath="$PROJECT_DIR$/app/templates/partial/right-sidebar.html" />
-    </list>
+    <list default="true" id="559c1d38-5321-4e5b-bf0d-2cad2ee198f6" name="Default" comment="" />
     <ignored path="SelloBuyer.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
