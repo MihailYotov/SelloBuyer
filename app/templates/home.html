@@ -65,7 +65,10 @@
                 <strong>Status:</strong>{{ad.status}}
             </div>
             <hr/>
-            <button class="btn btn-success" ng-click="Approve()" >Aprove</button>
+            <button class="btn btn-success" ng-click="approveAdAdmin()" >Aprove</button>
+            <button class="btn btn-warning" ng-click="rejectAdAdmin()" >Reject</button>
+            <button class="btn btn-primary" ng-click="editAdAdmin()" >Edit</button>
+            <button class="btn btn-danger" ng-click="deleteAdAdmin()" >Delete</button>
         </li>
     </ul>
 
