@@ -1,6 +1,7 @@
 'use strict';
 
-app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize, $location) {
+app.controller('UserAdsController', function ($scope, userService, notifyService, pageSize, $location, $rootScope) {
+        $rootScope.pageTitle = "My ads";
     $scope.adsParams = {
         'startPage' : 1,
         'pageSize' : pageSize

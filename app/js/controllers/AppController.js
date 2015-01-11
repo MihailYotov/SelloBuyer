@@ -1,7 +1,7 @@
 'use strict';
 
 app.controller('AppController',
-    function ($scope, $location, authService, notifyService) {
+    function ($scope, $location, authService, notifyService, $rootScope) {
         $scope.authService = authService;
 
         $scope.loginPath = function() {

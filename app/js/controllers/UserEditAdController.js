@@ -2,6 +2,7 @@
 
 app.controller('UserEditAdController',
     function ($scope, $rootScope, $routeParams, $location, townsService, categoriesService, userService, notifyService) {
+        $rootScope.pageTitle = "Edit ad";
 
         userService.getCurrentAd($routeParams.id, function(data) {
             $scope.adData = data;

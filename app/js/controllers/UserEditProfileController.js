@@ -1,6 +1,7 @@
 'use strict';
 
 app.controller('UserEditProfileController', function ($scope, $rootScope, $location, userService, townsService, authService, notifyService) {
+        $rootScope.pageTitle = "Edit Profile";
 
         userService.getCurrentUserProfile(function success(data) {
             $scope.userData = data;
