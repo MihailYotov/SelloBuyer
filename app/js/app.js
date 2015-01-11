@@ -2,7 +2,7 @@
 
 var app = angular.module('app', ['ngRoute', 'ngResource', 'ui.bootstrap.pagination', 'angular-loading-bar']);
 
-app.constant('baseServiceUrl', 'http://localhost:1337/');
+app.constant('baseServiceUrl', ' http://softuni-ads.azurewebsites.net/');
 app.constant('pageSize', 2);
 
 app.config(function ($routeProvider) {
