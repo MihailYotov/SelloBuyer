@@ -32,21 +32,31 @@
                 <button class="btn btn-primary" ng-click="deactivateUserAds(ad.id)">Deactivate</button>
             </div>
 
+            <div class="col-md-4" ng-if="ad.status=='Rejected'">
+                <h2>
+                    <span class="label label-danger">Status: {{ad.status}}</span>
+                </h2>
+                <button class="btn btn-primary" ng-click="deactivateUserAds(ad.id)">Deactivate</button>
+            </div>
+
             <div class="col-md-4" ng-if="ad.status=='Inactive'">
                 <h2>
                     <span class="label label-danger">Status: {{ad.status}}</span>
                 </h2>
                 <div>
-                <button class="btn btn-primary" ng-click="publishAgainUserAds(ad.id)" >Publish Again</button>
+                    <button class="btn btn-success" ng-click="publishAgainUserAds(ad.id)" >Publish Again</button>
                 </div>
                 <!--<div>-->
-                    <!--<button class="btn btn-primary" ng-click="editAd(ad)" >Edit</button>-->
+                <!--<button class="btn btn-primary" ng-click="editAd(ad)" >Edit</button>-->
                 <!--</div>-->
                 <div>
-                    <a href="#/user/ads/edit/{{ad.id}}"  class="link button">Edit</a>
+                    <button class="btn btn-primary" ng-click="edit(ad.id)" >Edit</button>
                 </div>
+                <!--<div>-->
+                <!--<a href="#/user/ads/edit/{{ad.id}}"  class="link button">Edit</a>-->
+                <!--</div>-->
                 <div>
-                <button class="btn btn-danger" ng-click="deleteUserAds(ad.id)" >Delete</button>
+                    <button class="btn btn-danger" ng-click="deleteUserAds(ad.id)" >Delete</button>
                 </div>
             </div>
 

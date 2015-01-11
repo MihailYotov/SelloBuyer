@@ -41,6 +41,10 @@ app.config(function ($routeProvider) {
         controller: 'UserEditProfileController'
     });
 
+    $routeProvider.when('/help', {
+        templateUrl: 'templates/help.html'
+    });
+
     $routeProvider.otherwise({
         redirectTo: '/'
     })
