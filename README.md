@@ -6,4 +6,5 @@ This application is made with AngularJS and the following libraries:
 -	jQuery.noty
 -	Bootstrap
 -	UI Bootstrap
+
 This SPA application is made for study purpose. 
